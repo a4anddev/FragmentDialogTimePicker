@@ -7,12 +7,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.TimePicker;
 
 public class DialogTime extends DialogFragment implements View.OnClickListener{
 
     View view;
-    TimePicker tm;
+    DatePicker tm;
     Button btn;
     @Nullable
     @Override
@@ -33,7 +34,7 @@ public class DialogTime extends DialogFragment implements View.OnClickListener{
     public void onClick(View v) {
 
         this.dismiss();
-        String timeOn = tm.getHour() + " : " + tm.getMinute();
+        String timeOn = tm.getYear() + " : " + tm.getMonth() + " : " + tm.getDayOfMonth();
 
         // get mainactivity here and call method of mainactivity here
         MainActivity ma = (MainActivity)getActivity();
