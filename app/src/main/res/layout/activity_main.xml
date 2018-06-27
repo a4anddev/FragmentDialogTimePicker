@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
 
 
    <Button
        android:id="@+id/btnShow"
-       android:text="Show"
        android:layout_width="wrap_content"
-       android:layout_height="wrap_content" />
+       android:layout_height="wrap_content"
+       android:layout_marginStart="39dp"
+       android:text="Show"
+       app:layout_constraintStart_toEndOf="@+id/dialogBuilder"
+       app:layout_constraintTop_toTopOf="parent" />
+
+
+   <Button
+       android:id="@+id/dialogBuilder"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="dialogBuilder"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
